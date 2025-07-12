@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 require('dotenv').config(); // Load environment variables
 
-const url = process.env.DATABASE_URL;
+const url = process.env.MONGODB_URI;
 
 module.exports.connect = () => {
   mongoose.connect(url, {
