@@ -12,7 +12,7 @@ const index = () => {
         const fetchdata = async () => {
             try {
                 setloading(true);
-                const res = await axios.get(`http://localhost:5000/api/application/${id}`);
+                const res = await axios.get(`https://internshala-clone-t1w6.onrender.com/api/application/${id}`);
                 console.log(res.data);
                 setdata(res.data);
             } catch (error) {
