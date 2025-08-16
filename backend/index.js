@@ -5,7 +5,9 @@ const cors = require("cors");
 
 const { connect } = require("./db"); // DB connection
 const router = require("./Routes/index");
-const port = 5000;
+
+// Use PORT from hosting provider, fallback to 5000 locally
+const port = process.env.PORT || 5000;
 
 // Connect to MongoDB ASAP
 connect();
@@ -24,8 +26,7 @@ app.get("/", (req, res) => {
 // Main API routes
 app.use("/api", router);
 
-
 // Start server
 app.listen(port, () => {
-  console.log(`🚀 Server is running on the port ${port}`);
+  console.log(`🚀 Server is running on port ${port}`);
 });
