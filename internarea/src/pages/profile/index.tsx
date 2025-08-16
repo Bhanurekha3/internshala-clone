@@ -1,13 +1,17 @@
+import LocationTracker from '@/Components/LocationTracker';
+import NotificationManager from '@/Components/NotificationManager';
 import { selectuser } from '@/Feature/Userslice';
 import { ExternalLink, Mail, User } from 'lucide-react';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 
+
+
 interface User {
-    name: string;
-    email: string;
-    photo: string;
+  name: string;
+  email: string;
+  photo: string;
 }
 
 const index = () => {
@@ -18,8 +22,8 @@ const index = () => {
 
   //  });
   const user = useSelector(selectuser);
-    return (
-         <div className="min-h-screen bg-gray-50 py-12">
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           {/* Profile Header */}
@@ -81,6 +85,13 @@ const index = () => {
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </div>
+              <div style={{ marginTop: '2rem' }}>
+                <LocationTracker />
+              </div>
+              <div style={{ marginTop: "20px" }}>
+                <NotificationManager />
+              </div>
+
             </div>
           </div>
         </div>

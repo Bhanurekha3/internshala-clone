@@ -9,6 +9,7 @@ import { auth } from "@/firebase/firebase";
 import { login, logout } from "@/Feature/Userslice";
 import { ToastContainer } from 'react-toastify';
 
+
 export default function App({ Component, pageProps }: AppProps) {
   function AuthListener() {
     const dispatch = useDispatch();
@@ -28,7 +29,6 @@ export default function App({ Component, pageProps }: AppProps) {
       });
     }, [dispatch]);
     return null;
-
   }
 
   return (
