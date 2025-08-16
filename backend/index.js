@@ -9,6 +9,8 @@ const router = require("./Routes/index");
 // Use PORT from hosting provider, fallback to 5000 locally
 const port = process.env.PORT || 5000;
 
+//connect it
+
 // Connect to MongoDB ASAP
 connect();
 
